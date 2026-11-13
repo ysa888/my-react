@@ -1,0 +1,471 @@
+/* Product detail page (from shoes.css)
+   Scoped under .page-shoe so it can't leak into other pages. */
+.page-shoe #shoe-page {
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+  background-color: #fff;
+}
+
+.page-shoe .shoe-card {
+  display: flex;
+  width: 100%;
+  max-width: 1440px;
+  background: #f2f2f2;
+  border-radius: 20px;
+  box-shadow: 0 0 5px 5px rgba(183, 183, 183, 0.4);
+  padding: 2rem 2rem;
+}
+
+.page-shoe .card-left {
+  flex: 0 0 39rem;
+  display: flex;
+}
+
+.page-shoe .image-frame {
+  background: #e0e0e0;
+  border: 15px solid white;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 37.188rem;
+  height: 37.5rem;
+  display: flex;
+  align-items: center;
+}
+
+.page-shoe .image-frame img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.page-shoe .card-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin-top: -1rem;
+}
+
+.page-shoe .card-right-top {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin-top: 1.8rem;
+}
+
+.page-shoe .back-btn {
+  align-self: flex-end;
+  padding: 0.5rem 4.5rem;
+  border-radius: 10px;
+  border: 2px solid black;
+  background-color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+  font-family: "Lato", sans-serif;
+  font-weight: 600;
+  position: absolute;
+  margin: -0.5rem 0.5rem 0 0;
+}
+
+.page-shoe .card-right h2 {
+  font-size: 0.877rem;
+  color: #555;
+  margin: 0 0 0.5rem 0;
+  font-family: "Inter", sans-serif;
+  font-weight: 300;
+}
+
+.page-shoe .card-right h1 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 0;
+  font-family: "Lato", sans-serif;
+  font-weight: 600;
+  margin: 0 0 0.8rem 0;
+}
+
+.page-shoe .price {
+  font-weight: bold;
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  margin: 0 0 1.7rem 0;
+}
+
+.page-shoe .size-label {
+  font-style: italic;
+  font-family: "lato", sans-serif;
+}
+
+.page-shoe #size-select {
+  width: 10rem;
+  height: 2rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding-left: 0.5rem;
+}
+
+.page-shoe .card-right-bottom {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  bottom: 30px;
+}
+
+.page-shoe .actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+  justify-content: space-between;
+  justify-content: center;
+}
+
+.page-shoe .actions button {
+  flex: 1;
+  padding: 0.2rem 0.5rem;
+  width: 46rem;
+  border: 2px solid #000;
+  border-radius: 10px;
+  background-color: rgb(241, 241, 241);
+  font-family: "Lato", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #3c3c3c;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: 0.3s;
+}
+
+.page-shoe .actions .cart-btn:hover {
+  background-color: #d8f9fd;
+  box-shadow: 0 0 10px 3px rgba(70, 167, 246, 0.4);
+  color: rgb(42, 42, 42);
+}
+
+.page-shoe .actions button .actions-cart {
+  width: 2rem;
+}
+
+.page-shoe .buy-btn {
+  margin-top: 1rem;
+  padding: 0.6rem;
+  border: none;
+  border-radius: 10px;
+  background-color: #2c2c2c;
+  color: white;
+  font-family: "Lato", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+  width: 46rem;
+}
+
+.page-shoe .buy-btn:hover {
+  font-size: 1.55rem;
+  box-shadow: 0 0 10px 1px black;
+}
+
+.page-shoe hr {
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+  border: none;
+  border-top: 1px solid #aaa;
+}
+
+.page-shoe .info {
+  color: #000000;
+  margin: 0 0 0 1rem;
+  font-family: "Inter", sans-serif;
+  font-weight: 300;
+  font-size: 1.096rem;
+}
+
+.page-shoe form {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  max-width: 600px;
+  margin: 1rem 0 0 0.5rem;
+}
+
+.page-shoe input[type="radio"] {
+  display: none;
+}
+
+.page-shoe .choices {
+  display: block;
+  width: 110px;
+  height: 35px;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  background-color: #fff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  text-align: center;
+}
+
+.page-shoe .choices:hover {
+  background-color: #fcfafa;
+  border-color: #000000;
+}
+
+.page-shoe input[type="radio"]:checked + label {
+  border-color: #3498db;
+  background-color: #e6f3ff;
+  color: #3498db;
+}
+
+@media (max-width: 1470px) {
+  .page-shoe .actions button,
+  .page-shoe .buy-btn {
+    width: 44rem;
+  }
+}
+
+@media (max-width: 1455px) {
+  .page-shoe .actions button,
+  .page-shoe .buy-btn {
+    width: 42rem;
+  }
+}
+
+@media (max-width: 1415px) {
+  .page-shoe .actions button,
+  .page-shoe .buy-btn {
+    width: 40rem;
+  }
+}
+
+@media (max-width: 1375px) {
+  .page-shoe .actions button,
+  .page-shoe .buy-btn {
+    width: 38rem;
+  }
+}
+
+@media (max-width: 1340px) {
+  .page-shoe .actions button,
+  .page-shoe .buy-btn {
+    width: 36rem;
+  }
+}
+
+@media (max-width: 1330px) {
+  .page-shoe .image-frame {
+    max-width: 35.188rem;
+    height: 35.5rem;
+  }
+
+  .page-shoe .back-btn {
+    padding: 0.5rem 4.5rem;
+    border-radius: 10px;
+    font-size: 1.3rem;
+    margin: -0.5rem 0.5rem 0 0;
+  }
+
+  .page-shoe .card-right h1 {
+    width: 56%;
+  }
+
+  .page-shoe .actions button,
+  .page-shoe .buy-btn {
+    width: 28rem;
+  }
+}
+
+@media (max-width: 1200px) {
+  .page-shoe .card-left {
+    flex: 0 0 34.5rem;
+    display: flex;
+  }
+
+  .page-shoe .image-frame {
+    max-width: 32.188rem;
+    height: 32.5rem;
+  }
+
+  .page-shoe .back-btn {
+    padding: 0.5rem 3.6rem;
+    border-radius: 10px;
+    font-size: 1rem;
+    margin: -0.5rem 0.5rem 0 0;
+  }
+
+  .page-shoe .card-right h1 {
+    width: 50%;
+    font-size: 1.3rem;
+  }
+
+  .page-shoe .card-right-bottom {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    bottom: 0px;
+  }
+
+  .page-shoe .actions button,
+  .page-shoe .buy-btn {
+    width: 23rem;
+  }
+}
+
+@media (max-width: 1050px) {
+  .page-shoe .back-btn {
+    padding: 0.4rem 3.4rem;
+    border-radius: 10px;
+    font-size: 0.8rem;
+    margin: -0.5rem 0.5rem 0 0;
+  }
+  .page-shoe .card-left {
+    flex: 0 0 28.5rem;
+    display: flex;
+  }
+
+  .page-shoe .image-frame {
+    max-width: 26.188rem;
+    height: 26.5rem;
+  }
+
+  .page-shoe .card-right h1 {
+    width: 100%;
+    font-size: 1.3rem;
+  }
+
+  .page-shoe .info {
+    font-size: 0.8rem;
+    color: #000000;
+    margin: 0 0 0 1rem;
+    font-family: "Inter", sans-serif;
+    font-weight: 300;
+  }
+
+  .page-shoe .card-right-bottom {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    bottom: -20px;
+  }
+
+  .page-shoe .actions button,
+  .page-shoe .buy-btn {
+    width: 20rem;
+  }
+
+  .page-shoe .buy-btn {
+    margin-top: 0.5rem;
+    padding: 0.6rem;
+
+    border-radius: 10px;
+
+    font-size: 1rem;
+  }
+  .page-shoe .actions button {
+    padding: 0.2rem 0.5rem;
+
+    border-radius: 10px;
+
+    font-size: 0.9rem;
+  }
+
+  .page-shoe hr {
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .page-shoe form {
+    gap: 10px;
+  }
+}
+
+@media (max-width: 900px) {
+  .page-shoe .card-left {
+    flex: 0 0 24rem;
+    display: flex;
+  }
+
+  .page-shoe .image-frame {
+    max-width: 22.188rem;
+    height: 22.5rem;
+  }
+
+  .page-shoe .actions button,
+  .page-shoe .buy-btn {
+    width: 16rem;
+  }
+
+  .page-shoe .buy-btn {
+    margin-top: 0.5rem;
+    padding: 0.6rem;
+
+    border-radius: 10px;
+
+    font-size: 0.8rem;
+  }
+  .page-shoe .actions button {
+    padding: 0.1rem 0.1rem;
+
+    border-radius: 10px;
+
+    font-size: 0.8rem;
+  }
+
+  .page-shoe .card-right h1 {
+    width: 100%;
+    font-size: 1.3rem;
+  }
+
+  .page-shoe .info {
+    font-size: 0.6rem;
+    color: #000000;
+    margin: 0 0 0 1rem;
+    font-family: "Inter", sans-serif;
+    font-weight: 300;
+  }
+
+  .page-shoe .price {
+    font-weight: bold;
+    font-family: "Inter", sans-serif;
+    font-weight: 600;
+    margin: 0 0 0.5rem 0;
+  }
+
+  .page-shoe .choices {
+    display: block;
+    width: 100px;
+    height: 30px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    background-color: #fff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  .page-shoe form {
+    margin: 0.5rem 0 0 0.5rem;
+  }
+}
+
+/* --- added during the React conversion --- */
+.page-shoe .empty-state {
+  font-family: "Lato", sans-serif;
+  font-size: 1.2rem;
+  padding: 3rem 1rem;
+}
+.page-shoe .buy-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}

@@ -1,0 +1,353 @@
+/* Products + New Arrivals listing (from intro.css, products.css)
+   Scoped under .page-products so it can't leak into other pages. */
+.page-products #intro {
+  width: 100%;
+  height: 9.938rem;
+  box-shadow: 0 4px 10px 1px rgba(130, 130, 130, 0.375);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.page-products #intro h1 {
+  font-size: 3.85rem;
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  font-style: italic;
+  margin: -1.5rem 0 0 2.5rem;
+}
+
+.page-products #intro p {
+  font-size: 1rem;
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  font-style: italic;
+  color: #777777;
+  margin-left: 2.5rem;
+}
+
+.page-products #products-area {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-items: center;
+  padding: 1.875rem 5.688rem 0 5.688rem;
+}
+
+.page-products #products-area a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.page-products .product-wrapper {
+  width: 17.613rem;
+  height: 24.117rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2.938rem;
+}
+
+.page-products #products-area .container {
+  width: 17.613rem;
+  height: 24.117rem;
+  box-shadow: 0 4.68px 13.58px 2.34px rgb(186, 185, 185);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  justify-content: space-between;
+  transition: 0.5s;
+}
+
+.page-products #products-area .container:hover {
+  box-shadow: 0 4.68px 13.58px 2.34px rgb(123, 123, 123);
+}
+
+.page-products #products-area .container .shoe {
+  width: 16.438rem;
+  height: 12.313rem;
+  border-radius: 5.85px 5.85px 0 0;
+  margin: 0.588em 0.588em 0 0.588em;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.page-products #products-area .container .shoe-img {
+  width: 100%;
+  height: 100%;
+}
+
+.page-products #products-area .shoe-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin: 1.188rem 0 0 0;
+}
+
+.page-products #products-area .shoe-info h2 {
+  font-size: 0.877rem;
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+  color: rgba(0, 0, 0, 0.649);
+  margin: 0 0 0.438em 1.563rem;
+}
+
+.page-products #products-area .shoe-info h1 {
+  font-size: 1.169rem;
+  font-family: "Lato", sans-serif;
+  font-weight: 600;
+  margin: 0 0 0.375em 1.563rem;
+}
+
+.page-products #products-area .shoe-info p {
+  font-size: 1.096rem;
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  margin: 0 0 0 1.563rem;
+}
+
+.page-products #products-area .product-wrapper .AddtoCart {
+  background: none;
+  border: none;
+  color: inherit;
+  width: 14.105rem;
+  height: 2.193rem;
+  display: flex;
+  align-self: center;
+  margin: 0 auto 0.875rem auto;
+  position: absolute;
+  bottom: 0px;
+}
+
+.page-products #products-area .product-wrapper .cart {
+  display: flex;
+  background-color: #2563eb;
+  width: 100%;
+  height: 100%;
+  border-radius: 5.85px;
+  justify-content: center;
+  align-items: center;
+  transition: 0.3s;
+}
+
+.page-products #products-area .product-wrapper .cart img {
+  width: 1.247rem;
+  height: 1.205rem;
+  margin: 0 0 0 -1em;
+}
+
+.page-products #products-area .product-wrapper .cart p {
+  font-size: 0.95rem;
+  font-family: "Inter", sans-serif;
+  font-weight: 300;
+  color: white;
+  margin: 0 0 0 0.375rem;
+  transition: 0.3s;
+}
+
+.page-products #products-area .product-wrapper .AddtoCart:hover {
+  .cart {
+    background-color: #1b52d1;
+  }
+
+  p {
+    font-weight: 400;
+  }
+}
+
+.page-products .size-selector {
+  margin: 0 0 10rem 0;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+}
+
+.page-products .size-dropdown {
+  padding: 0.3rem 0.5rem;
+  font-size: 0.8rem;
+  font-weight: bold;
+  border: 1px solid #ccc;
+  border-radius: 2px;
+  background-color: #fff;
+  appearance: none;
+  outline: none;
+  transition: border-color 0.3s ease;
+  
+}
+
+.page-products .size-dropdown:hover,
+.page-products .size-dropdown:focus {
+  border-color: #2563eb;
+}
+
+@media (max-width: 1450px) {
+
+  .page-products #products-area {
+  grid-template-columns: repeat(4, 1fr);
+  padding: 1.875rem 4rem 0 4rem;
+}
+
+  .page-products .product-wrapper,
+  .page-products #products-area .container {
+  width: 16.613rem;
+  height: 23.117rem;
+}
+
+.page-products #products-area .container .shoe {
+  width: 15.438rem;
+  height: 12.313rem;
+  border-radius: 5.85px 5.85px 0 0;
+  margin: 0.588em 0.588em 0 0.588em;
+}
+
+.page-products #products-area .shoe-info {
+  margin: 0.875rem 0 0 0;
+}
+
+.page-products #products-area .shoe-info h2 {
+  font-size: 0.877rem;
+  margin: 0 0 0.438em 1.563rem;
+}
+
+.page-products #products-area .shoe-info h1 {
+  font-size: 1.169rem;
+  margin: 0 0 0.375em 1.563rem;
+}
+
+.page-products #products-area .shoe-info p {
+  font-size: 1.096rem;
+  margin: 0 0 0 1.563rem;
+}
+
+.page-products #products-area .product-wrapper .AddtoCart {
+  width: 14.105rem;
+  height: 2.193rem;
+  margin: 0 auto 0.875rem auto;
+  bottom: 0px;
+}
+
+.page-products #products-area .product-wrapper .cart {
+  border-radius: 5.85px;
+}
+
+.page-products #products-area .product-wrapper .cart img {
+  width: 1.247rem;
+  height: 1.205rem;
+  margin: 0 0 0 -1em;
+}
+
+.page-products #products-area .product-wrapper .cart p {
+  font-size: 0.95rem;
+  margin: 0 0 0 0.375rem;
+}
+
+.page-products .size-dropdown {
+  padding: 0.3rem 0.5rem;
+  font-size: 0.8rem;
+  border-radius: 2px;
+}
+
+}
+
+@media (max-width: 1300px) {
+   .page-products #products-area {
+  grid-template-columns: repeat(4, 1fr);
+  padding: 1.875rem 3.5rem 0 3.5rem;
+}
+
+ .page-products .product-wrapper,
+  .page-products #products-area .container {
+  width: 14.613rem;
+  height: 21.117rem;
+}
+
+.page-products #products-area .container .shoe {
+  width: 13.438rem;
+  height: 10.313rem;
+  border-radius: 5.85px 5.85px 0 0;
+  margin: 0.588em 0.588em 0 0.588em;
+}
+
+.page-products #products-area .product-wrapper .AddtoCart {
+  width: 12.105rem;
+  height: 2.193rem;
+  margin: 0 auto 0.875rem auto;
+  bottom: 0px;
+}
+}
+
+@media (max-width: 1150px) {
+   .page-products #products-area {
+  grid-template-columns: repeat(3, 1fr);
+  padding: 1.875rem 3.5rem 0 3.5rem;
+}
+
+}
+
+@media (max-width: 900px) {
+   .page-products #products-area {
+  padding: 1.875rem 2rem 0 2rem;
+}
+
+ .page-products .product-wrapper,
+  .page-products #products-area .container {
+  width: 12.613rem;
+  height: 18.117rem;
+}
+
+.page-products .size-dropdown {
+  padding: 0.2rem 0.4rem;
+  font-size: 0.7rem;
+  border-radius: 2px;
+}
+
+.page-products #products-area .container .shoe {
+  width: 11.438rem;
+  height: 8.313rem;
+  border-radius: 5.85px 5.85px 0 0;
+  margin: 0.588em 0.588em 0 0.588em;
+}
+
+.page-products #products-area .shoe-info h2 {
+  font-size: 0.777rem;
+  margin: 0 0 0.438em 1.563rem;
+}
+
+.page-products #products-area .shoe-info h1 {
+  font-size: 1rem;
+  margin: 0 0 0.375em 1.563rem;
+}
+
+.page-products #products-area .shoe-info p {
+  font-size: 1rem;
+  margin: 0 0 0 1.563rem;
+}
+
+.page-products #products-area .product-wrapper .AddtoCart {
+  width: 10.105rem;
+  height: 1.893rem;
+  margin: 0 auto 0.875rem auto;
+  bottom: 0px;
+}
+
+.page-products #products-area .product-wrapper .cart p {
+  font-size: 0.75rem;
+  margin: 0 0 0 0.375rem;
+}
+}
+
+@media (max-width: 700px) {
+   .page-products #products-area {
+  grid-template-columns: repeat(2, 1fr);
+   }
+}
+
+/* --- added during the React conversion --- */
+.page-products .empty-state {
+  text-align: center;
+  font-family: "Lato", sans-serif;
+  font-size: 1.2rem;
+  padding: 3rem 1rem;
+}

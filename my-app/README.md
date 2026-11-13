@@ -1,16 +1,39 @@
-# React + Vite
+# NxtStep PH
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+React (Vite) version of the NxtStep PH shoe store. Converted from the original
+plain HTML/CSS/JS site.
 
-Currently, two official plugins are available:
+## Run it
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+```bash
+pnpm install
+pnpm dev        # http://localhost:5173
+pnpm build      # production build in dist/
+pnpm lint
+```
 
-## React Compiler
+## Pages (React Router)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+| URL                        | Page                                        |
+| -------------------------- | ------------------------------------------- |
+| `/`                        | Home                                        |
+| `/products`                | All products (`?brand=Nike`, `Reebok`, `New Balance`) |
+| `/new-arrivals`            | New arrivals                                |
+| `/shoe/:id`                | Product page, e.g. `/shoe/jogger-lite-black` |
+| `/cart`                    | Cart                                        |
 
-## Expanding the ESLint configuration
+## Where things live
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```
+public/Images/      all pictures (referenced as /Images/...)
+src/data/products.js   every product, in ONE place. Add a shoe here and it shows up everywhere
+src/context/        cart state (saved in localStorage under "nxtstep-cart")
+src/components/     ShopLayout (shared header), ProductCard, home/ sections
+src/pages/          Home, ProductList, ProductDetail, Cart, NotFound
+src/styles/         the old CSS, one file per page, each scoped under its own class
+```
+
+The old site's CSS files were all loaded globally, so rules from different pages
+(`#intro`, `.image-frame`, `header`, `*` ...) would clash in a single-page app.
+Each stylesheet is therefore prefixed with its page class (`.page-home`,
+`.page-products`, `.page-shoe`, `.page-cart`, `.shop-layout`).

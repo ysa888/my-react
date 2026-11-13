@@ -1,0 +1,173 @@
+/* Shared header for Products / New Arrivals / Product / Cart (from header.css)
+   Scoped under .shop-layout so it can't leak into other pages. */
+.shop-layout * {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.shop-layout a,
+.shop-layout button {
+  cursor: pointer;
+}
+
+.shop-layout #products-header {
+  display: flex;
+  width: 100%;
+  height: 7rem;
+  background-color: #17202c;
+  box-shadow: 0 8px 10px 5px rgba(93, 93, 93, 0.507);
+}
+
+.shop-layout #products-header .image {
+  width: 10.875rem;
+  height: 7.188rem;
+  margin: 0 3.188rem 0 1.5rem;
+}
+
+.shop-layout #products-header .image img {
+  width: 100%;
+  height: 7.188em;
+}
+
+.shop-layout .search-bar::placeholder {
+  color: rgba(255, 255, 255, 0.542);
+}
+
+.shop-layout #products-header .middle-header {
+  flex: 1;
+  min-width: 0;
+  margin: 1em 2em 0 0;
+}
+
+.shop-layout .search-form {
+  width: 100%;
+}
+
+.shop-layout .search-bar {
+  width: 100%;
+  z-index: 10;
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+  border: 1.5px solid #a39393;
+  border-radius: 5px;
+  padding: 0.5em 0.75em 0.5em 2.5em;
+  background-image: url("/Images/search (white).png");
+  background-repeat: no-repeat;
+  background-position: 0.6em center;
+  background-size: 1.5em;
+  background-color: #374151;
+  color: white;
+}
+
+.shop-layout #products-header .navigation li,
+.shop-layout #products-header .navigation a {
+  font-family: "Lato", sans-serif;
+  font-weight: 600;
+  font-style: italic;
+  display: inline-block;
+  text-decoration: none;
+  color: #cbcbcb;
+  padding: 0.875em 1.5em 0 0;
+}
+
+.shop-layout #products-header .icons {
+  padding: 1em 0 0 0;
+}
+
+.shop-layout #products-header .icons img {
+  padding: 0 0 0 1em;
+}
+
+@media (max-width: 1455px) {
+  .shop-layout .search-bar {
+ 
+  padding: 0.5em 0.75em 0.5em 2.5em;
+  
+}
+}
+
+@media (max-width: 1300px) {
+  .shop-layout .search-bar {
+ 
+  padding: 0.5em 0.75em 0.5em 2.5em;
+  
+}
+}
+
+@media (max-width: 1150px) {
+  .shop-layout .search-bar {
+ 
+  padding: 0.5em 0.75em 0.5em 2.5em;
+  
+}
+
+.shop-layout #products-header .navigation li,
+.shop-layout #products-header .navigation a {
+  font-family: "Lato", sans-serif;
+  font-weight: 600;
+  font-style: italic;
+  display: inline-block;
+  text-decoration: none;
+  color: #cbcbcb;
+  padding: 0.875em 1em 0 0;
+}
+}
+
+@media (max-width: 1000px) {
+  .shop-layout .search-bar {
+ 
+  padding: 0.5em 0.75em 0.5em 2.5em;
+  
+}
+
+.shop-layout #products-header .navigation li,
+.shop-layout #products-header .navigation a {
+  font-family: "Lato", sans-serif;
+  font-weight: 600;
+  font-style: italic;
+  display: inline-block;
+  text-decoration: none;
+  color: #cbcbcb;
+  padding: 0.875em 1em 0 0;
+  font-size: 0.8rem;
+}
+
+.shop-layout #products-header .middle-header {
+  margin: 1em 1em 0 0;
+}
+
+.shop-layout #products-header .image {
+  width: 8.875rem;
+  height: 5.188rem;
+  margin: 0 3.188rem 0 1.5rem;
+}
+
+}
+
+@media (max-width: 810px) {
+  .shop-layout .search-bar {
+ 
+  padding: 0.5em 0.75em 0.5em 2.5em;
+  
+}
+
+.shop-layout #products-header .image {
+  width: 6.875rem;
+  height: 3.188rem;
+  margin: 0 1.188rem 0 1rem;
+}
+
+.shop-layout #products-header .navigation li,
+.shop-layout #products-header .navigation a {
+  font-family: "Lato", sans-serif;
+  font-weight: 600;
+  font-style: italic;
+  display: inline-block;
+  text-decoration: none;
+  color: #cbcbcb;
+  padding: 0.875em 0.8em 0 0;
+  font-size: 0.7rem;
+}
+}
